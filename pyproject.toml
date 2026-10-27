@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "paulbob411-regressdet"
+version = "0.1.0"
+description = "对齐两轮结果，标出分数下降超过阈值的指标与下降最快的子集"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "paulbob411" }]
+keywords = ["llm", "cli", "analysis", "observability"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://paulbob411.github.io"
+Repository = "https://github.com/paulbob411/regressdet"
+Issues = "https://github.com/paulbob411/regressdet/issues"
+
+[project.scripts]
+regressdet = "regressdet:main"
+
+[tool.setuptools]
+py-modules = ["regressdet"]
